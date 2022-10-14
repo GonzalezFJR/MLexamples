@@ -24,7 +24,7 @@ def plot_training_curves(training_curves,
         plt.legend(labels=phases)
 
 def classify_predictions(model, device, dataloader):
-    model.eval()   # Configurar el modelo en el modo de evaluación
+    model.eval()   # Evaluation mode
     all_labels = torch.tensor([]).to(device)
     all_scores = torch.tensor([]).to(device)
     all_preds = torch.tensor([]).to(device)
